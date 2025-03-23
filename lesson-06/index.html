@@ -108,33 +108,73 @@
       <!-- #region Ingredients -->
       <section>
         <h2>It all adds up to one exceptional <span>taste</span> sensation</h2>
+
         <ul>
           <li>
-            <img src="" alt="" />
+            <img
+              srcset="
+                ./images/ingredients/img-1.png    1x,
+                ./images/ingredients/img-1@2x.png 2x
+              "
+              src="./images/ingredients/img-1.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>MILK CHOCOLATE</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-2.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>MILK</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-3.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>NUTS</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-4.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>SEMI - SWEET CHOCOLATE</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-5.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>CACAO</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-6.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>RASPBERRY</h3>
           </li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./images/ingredients/img-7.png"
+              alt=""
+              width="216"
+              height="160"
+            />
             <h3>COCONUT OIL</h3>
           </li>
         </ul>
@@ -143,7 +183,26 @@
       <!-- #region Made -->
       <section id="made">
         <h2>How it’s <span>made</span>?</h2>
-        <img src="" alt="" />
+        <picture>
+          <!-- Tablet screen -->
+          <source
+            media="(min-width: 768px) and (orientation: portrait)"
+            srcset="./images/made/image.webp 1x, ./images/made/image@2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/made/image.jpg 1x, ./images/made/image@2x.jpg 2x"
+            type="image/jpg"
+          />
+          <!-- Mobile screen -->
+          <source
+            media="(max-width: 767px)"
+            srcset="./images/made/image.webp 1x, ./images/made/image@2x.webp 2x"
+            type="image/webp"
+          />
+          <img src="./images/made/image.jpg" alt="" width="600" height="400" />
+        </picture>
 
         <h3>
           Try our chocolates today and discover the perfect balance of flavor
