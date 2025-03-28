@@ -19,61 +19,61 @@
 
 ### Модуль 1: Become a Front-End Developer
 
-- **Тема 1.1:** What Is Web Development?
+- **Заняття 01:** What Is Web Development?
   - What Is Web Development?
   - Core Concepts of Web
-- **Тема 1.2:** Code Editors and Other Tools for Web Developers
+- **Заняття 02:** Code Editors and Other Tools for Web Developers
   - Code Editors and Other Tools for Web Developers
   - Introduction to Git: Tools and Services
 
 ### Модуль 2: HTML Essential
 
-- **Тема 2.1:** Introduction to HTML
-- **Тема 2.2:** HTML Text Elements
-- **Тема 2.3:** Linking and Images
-- **Тема 2.4:** Structuring Tabular Data
-- **Тема 2.5:** HTML Media
-- **Тема 2.6:** HTML Forms and Interactive Elements
-- **Тема 2.7:** Accessibility Fundamentals and HTML Semantic (Part 1)
-- **Тема 2.8:** Accessibility Fundamentals and HTML Semantic (Part 2)
-- **Тема 2.9:** HTML development tools and extending HTML
+- **Заняття 03:** Introduction to HTML
+- **Заняття 04:** HTML Text Elements
+- **Заняття 05:** Linking and Images
+- **Заняття 06:** Structuring Tabular Data
+- **Заняття 07:** HTML Media
+- **Заняття 08:** HTML Forms and Interactive Elements
+- **Заняття 09:** Accessibility Fundamentals and HTML Semantic (Part 1)
+- **Заняття 10:** Accessibility Fundamentals and HTML Semantic (Part 2)
+- **Заняття 11:** HTML development tools and extending HTML
 
 ### Модуль 3: CSS Basics (Part 1)
 
-- **Тема 3.1:** Introduction to CSS Basics
-- **Тема 3.2:** CSS Selectors (Part 1)
-- **Тема 3.3:** CSS Selectors (Part 2)
+- **Заняття 12:** Introduction to CSS Basics
+- **Заняття 13:** CSS Selectors (Part 1)
+- **Заняття 14:** CSS Selectors (Part 2)
 
 ### Модуль 4: CSS Basics (Part 2)
 
-- **Тема 4.1:** Useful CSS Rules
-- **Тема 4.2:** CSS Fonts and Images
-- **Тема 4.3:** CSS Features (Part 1)
-- **Тема 4.4:** CSS Features (Part 2)
+- **Заняття 15:** Useful CSS Rules
+- **Заняття 16:** CSS Fonts and Images
+- **Заняття 17:** CSS Features (Part 1)
+- **Заняття 18:** CSS Features (Part 2)
 
 ### Модуль 5: CSS Positioning and Layouts
 
-- **Тема 5.1:** CSS Layout Basics
-- **Тема 5.2:** Flexbox
-- **Тема 5.3:** CSS Grids
+- **Заняття 19:** CSS Layout Basics
+- **Заняття 20:** Flexbox
+- **Заняття 21:** CSS Grids
 
 ### Модуль 6: CSS: Responsive Design and Cross Browser Development
 
-- **Тема 6.1:** Responsive Design Intro
-- **Тема 6.2:** Media Queries and Advanced Responsive Design
-- **Тема 6.3:** Cross-Browser/Device Development
+- **Заняття 22:** Responsive Design Intro
+- **Заняття 23:** Media Queries and Advanced Responsive Design
+- **Заняття 24:** Cross-Browser/Device Development
 
 ### Модуль 7: CSS: Transitions, Transforms, and Animation
 
-- **Тема 7.1:** CSS Transitions and Transform (Part 1)
-- **Тема 7.2:** CSS Transitions and Transform (Part 2)
-- **Тема 7.3:** CSS Animations
+- **Заняття 25:** CSS Transitions and Transform (Part 1)
+- **Заняття 26:** CSS Transitions and Transform (Part 2)
+- **Заняття 27:** CSS Animations
 
 ### Модуль 8: CSS: Pre-processors, Sass. CSS Methodologies, BEM
 
-- **Тема 8.1:** CSS Preprocessors
-- **Тема 8.2:** CSS Methodologies Fundamentals
-- **Тема 8.3:** CSS Utilities and Tools
+- **Заняття 28:** CSS Preprocessors
+- **Заняття 29:** CSS Methodologies Fundamentals
+- **Заняття 30:** CSS Utilities and Tools
 
 ## Оцінювання
 
