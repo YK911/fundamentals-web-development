@@ -14,6 +14,9 @@
       * {
         box-sizing: border-box;
       }
+      body {
+        padding-block: 40px;
+      }
       .made-wrapper {
         position: relative;
         max-width: 600px;
@@ -49,6 +52,32 @@
           cursor: pointer;
         }
       }
+      .sr,
+      .read-only,
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
+      [href="#home"] {
+        display: inline-block;
+        padding-block: 16px;
+
+        outline: 2px solid red;
+        outline-offset: -2px;
+      }
+      #email-error {
+        color: red;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -57,23 +86,25 @@
         <a href="#"><i>SIMPLY</i> CHOCOLATE</a>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" aria-labelledby="home">Home</a>
           </li>
           <li>
-            <a href="#made">How it’s made?</a>
+            <a href="#made" aria-labelledby="made">How it’s made?</a>
           </li>
           <li>
-            <a href="#reviews">Chocolate is loved</a>
+            <a href="#reviews" aria-labelledby="reviews">Chocolate is loved</a>
           </li>
         </ul>
       </nav>
+
       <ul>
         <li>
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to"
+            aria-label="Link to Facebook"
+            title="Link to Facebook"
           >
             <img src="./images/icons/facebook.svg" alt="Facebook icon" />
           </a>
@@ -83,7 +114,8 @@
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to"
+            aria-label="Link to Instagram"
+            title="Link to Instagram"
           >
             <img src="./images/icons/instagram.svg" alt="Facebook icon" />
           </a>
@@ -93,7 +125,8 @@
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to"
+            aria-label="Link to Twitter"
+            title="Link to Twitter"
           >
             <img src="./images/icons/twitter.svg" alt="Facebook icon" />
           </a>
@@ -102,8 +135,8 @@
     </header>
     <main>
       <!-- #region Hero -->
-      <section>
-        <h1>
+      <section aria-labelledby="heroSectionHeader1" role="presentation">
+        <h1 id="heroSectionHeader1" tabindex="0">
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
         </h1>
@@ -113,8 +146,8 @@
       </section>
       <!-- #endregion -->
       <!-- #region Benefits -->
-      <section id="benefits">
-        <h2 hidden>Benefits</h2>
+      <section id="benefits" aria-labelledby="benefitsSectionHeader2">
+        <h2 class="visually-hidden" id="benefitsSectionHeader2">Benefits</h2>
         <ul>
           <li>
             <h3>Unsurpassed taste</h3>
@@ -148,8 +181,10 @@
       </section>
       <!-- #endregion -->
       <!-- #region Ingredients -->
-      <section>
-        <h2>It all adds up to one exceptional <span>taste</span> sensation</h2>
+      <section aria-labelledby="ingredientsSectionHeader2">
+        <h2 id="ingredientsSectionHeader2"
+          >It all adds up to one exceptional <span>taste</span> sensation</h2
+        >
 
         <ul>
           <li>
@@ -159,11 +194,12 @@
                 ./images/ingredients/img-1@2x.png 2x
               "
               src="./images/ingredients/img-1.png"
-              alt=""
+              alt="Milk chocolate"
               width="216"
               height="160"
             />
-            <h3>MILK CHOCOLATE</h3>
+
+            <h3>Milk chocolate</h3>
           </li>
           <li>
             <img
@@ -223,8 +259,8 @@
       </section>
       <!-- #endregion  -->
       <!-- #region Made -->
-      <section id="made">
-        <h2>How it’s <span>made</span>?</h2>
+      <section id="made" aria-labelledby="madeSectionHeader2">
+        <h2 id="madeSectionHeader2">How it’s <span>made</span>?</h2>
 
         <div class="made-wrapper">
           <button>
@@ -257,8 +293,8 @@
       </section>
       <!-- #endregion -->
       <!-- #region Products -->
-      <section>
-        <h2>Our <span>products</span></h2>
+      <section aria-labelledby="productsSectionHeader2">
+        <h2 id="productsSectionHeader2">Our <span>products</span></h2>
         <ul>
           <li>
             <picture>
@@ -368,8 +404,8 @@
       </section>
       <!-- #endregion -->
       <!-- #region Top sellers -->
-      <section>
-        <h2><span>Top</span> sellers</h2>
+      <section aria-labelledby="bestsellersSectionHeader2">
+        <h2 id="bestsellersSectionHeader2"><span>Top</span> sellers</h2>
 
         <ul>
           <li>
@@ -442,8 +478,8 @@
       </section>
       <!-- #endregion -->
       <!-- #region Reviews -->
-      <section id="reviews">
-        <h2>Chocolate is loved</h2>
+      <section id="reviews" aria-labelledby="reviewsSectionHeader2">
+        <h2 id="reviewsSectionHeader2">Chocolate is loved</h2>
         <ul>
           <li>
             <picture>
@@ -497,7 +533,11 @@
           </li>
         </ul>
 
-        <button type="button">Leave a review</button>
+        <button type="button" data-modal-open>Leave a review</button>
+        <dialog>
+          <button data-modal-close>X</button>
+          <p>Modal window</p>
+        </dialog>
       </section>
       <!-- #endregion -->
     </main>
@@ -571,10 +611,36 @@
         </ul>
 
         <form name="subsription">
-          <input type="email" placeholder="Enter your email" />
+          <label class="visually-hidden" for="subsriptionEmail">
+            User email
+          </label>
+          <span class="visually-hidden" id="email-error">Error text</span>
+          <input
+            type="email"
+            id="subsriptionEmail"
+            placeholder="Enter your email"
+            aria-describedby="email-error"
+            aria-invalid="true"
+          />
           <button type="submit">Subscribe</button>
         </form>
       </div>
     </footer>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector("[data-modal-open]");
+      const closeButton = document.querySelector("[data-modal-close]");
+
+      // "Show the dialog" button opens the dialog modally
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // "Close" button closes the dialog
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
   </body>
 </html>
