@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+      user-scalable="no"
+    />
+    <title>Accessibility</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+      p {
+        width: 60ch;
+        line-height: 1.5; /* 51.75px */
+      }
+      button {
+        color: lightgray;
+      }
+      button:focus {
+        outline: unset;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      #backdrop {
+        position: fixed;
+        inset: 0;
+        background-color: rgb(0 0 0 / 25%);
+
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 200ms;
+        transition-delay: 150ms;
+
+        &.is-open {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: initial;
+        }
+
+        #modal {
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 16px;
+          box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+
+          transform: translateY(-50%);
+          opacity: 0;
+
+          transition: 150ms;
+
+          #backdrop.is-open & {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" data-feedback-action="open">
+      Open feedback form
+    </button>
+    <div id="backdrop" data-modal-feedback>
+      <div id="modal">
+        <button data-feedback-action="close">X</button>
+        <p>Модальне вікно з формю зворотнього звʼязку</p>
+        <form>
+          <label for="feedbackName">Імʼя користувача</label>
+          <input type="text" id="feedbackName" name="feedbackName" />
+          <label for="feedbackPhone">Телефон</label>
+          <input type="tel" id="feedbackPhone" name="feedbackPhone" />
+          <label for="feeedbackEmail">Електронна пошта</label>
+          <input type="email" id="feeedbackEmail" name="feeedbackEmail" />
+
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </div>
+    <!-- #region Breadcrumbs -->
+    <nav aria-label="breadcrumbs">
+      <ul>
+        <li>
+          <a href="https://my-site.com/">Головна</a>
+        </li>
+        <li>
+          <a href="https://my-site.com/products">Товари</a>
+        </li>
+        <li>
+          <a href="https://my-site.com/children-clothing">Дитячий одяг</a>
+        </li>
+        <li>
+          <a href="https://my-site.com/shoes" aria-current="page">Взуття</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- #endregion -->
+
+    <button type="button" data-modal-open>Open modal</button>
+    <!-- #region -->
+    <dialog id="dialog">
+      <button data-modal-close>X</button>
+      <p>Модальне вікно з формю зворотнього звʼязку</p>
+      <form>
+        <label for="userName">Імʼя користувача</label>
+        <input type="text" id="userName" name="userName" />
+        <label for="userPhone">Телефон</label>
+        <input type="tel" id="userPhone" name="userPhone" />
+        <label for="userEmail">Електронна пошта</label>
+        <input type="email" id="userEmail" name="userEmail" />
+
+        <button type="submit">Надіслати</button>
+      </form>
+    </dialog>
+    <!-- #endregion -->
+
+    <p>
+      Використання правильного
+      <abbr title="Hypertext Markup Language" lang="en"> HTML </abbr>
+      робить наш сайт доступним
+    </p>
+    <p>
+      Використання правильного
+      <span lang="en">Hypertext Markup Language</span> (<abbr> HTML </abbr>
+      ) робить наш сайт доступним
+    </p>
+
+    <p
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
+      sapiente reiciendis assumenda architecto rem animi pariatur blanditiis a
+      doloribus accusamus magnam, deleniti unde mollitia odit provident neque
+      dolorem? Consequatur, aspernatur.</p
+    >
+
+    <p
+      class="codepen"
+      data-height="300"
+      data-default-tab="html,result"
+      data-slug-hash="dyxLYWq"
+      data-pen-title="Slide inner block"
+      data-user="YK911"
+      style="
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+      "
+    >
+      <span
+        >See the Pen
+        <a href="https://codepen.io/YK911/pen/dyxLYWq"> Slide inner block</a> by
+        Kosytsia Yaroslav (<a href="https://codepen.io/YK911">@YK911</a>) on
+        <a href="https://codepen.io">CodePen</a>.</span
+      >
+    </p>
+    <script
+      async
+      src="https://public.codepenassets.com/embed/index.js"
+    ></script>
+
+    <table>
+      <caption>Caption for table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Row Header 1</th>
+          <td>Table Data 1</td>
+          <td>Table Data 2</td>
+        </tr>
+        <tr>
+          <th scope="row">Row Header 1</th>
+          <td>Table Data 1</td>
+          <td>Table Data 2</td>
+        </tr>
+        <tr>
+          <th scope="row">Row Header 1</th>
+          <td>Table Data 1</td>
+          <td>Table Data 2</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+
+    <script>
+      const dialog = document.querySelector("#dialog");
+      const showButton = document.querySelector("[data-modal-open]");
+      const closeButton = document.querySelector("[data-modal-close]");
+
+      // "Show the dialog" button opens the dialog modally
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // "Close" button closes the dialog
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+
+      // Feedback block
+      const modalFeedback = document.querySelector("[data-modal-feedback]");
+      const showButtonFeedback = document.querySelector(
+        "[data-feedback-action='open']"
+      );
+      const closeButtonFeedback = document.querySelector(
+        "[data-feedback-action='close']"
+      );
+
+      showButtonFeedback.addEventListener("click", toogleFeedbackModal);
+      closeButtonFeedback.addEventListener("click", toogleFeedbackModal);
+
+      function toogleFeedbackModal(event) {
+        modalFeedback.classList.toggle("is-open");
+      }
+    </script>
+  </body>
+</html>

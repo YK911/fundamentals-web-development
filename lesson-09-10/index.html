@@ -82,7 +82,7 @@
   </head>
   <body>
     <header id="home">
-      <nav>
+      <nav aria-label="main navigation">
         <a href="#"><i>SIMPLY</i> CHOCOLATE</a>
         <ul>
           <li>
@@ -106,7 +106,31 @@
             aria-label="Link to Facebook"
             title="Link to Facebook"
           >
-            <img src="./images/icons/facebook.svg" alt="Facebook icon" />
+            <!-- <img src="./images/icons/facebook.svg" alt="Facebook icon" /> -->
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Facebook icon. Follow to navigate to https://facebook.com
+              </title>
+              <rect
+                x="0.5"
+                y="0.5"
+                width="39"
+                height="39"
+                rx="9.5"
+                stroke="#111111"
+                stroke-opacity="0.1"
+              />
+              <path
+                d="M22.64 11.4802C22.82 11.4802 23 11.4802 23.36 11.4802V14.1802C23.18 14.1802 22.82 14.1802 22.46 14.1802C22.1 14.1802 21.74 14.1802 21.56 14.3602C21.38 14.5402 21.38 14.7202 21.38 15.1402C21.38 15.5002 21.38 15.7402 21.38 16.1002H23.36V18.3802H21.38V28.2802H18.32V18.3202H16.7V16.0402H18.32V15.2602C18.32 13.9402 18.5 12.9802 18.86 12.5602C19.4 11.7802 20.48 11.4202 22.1 11.4202C22.28 11.4802 22.46 11.4802 22.64 11.4802Z"
+                fill="#111111"
+              />
+            </svg>
           </a>
         </li>
         <li>
@@ -263,7 +287,7 @@
         <h2 id="madeSectionHeader2">How it’s <span>made</span>?</h2>
 
         <div class="made-wrapper">
-          <button>
+          <button aria-label="Play button">
             <img src="./images/made/play.svg" alt="" />
           </button>
         </div>
@@ -598,17 +622,19 @@
       </div>
       <!-- Footer bottom -->
       <div>
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#made">How it’s made?</a>
-          </li>
-          <li>
-            <a href="#reviews">Chocolate is loved</a>
-          </li>
-        </ul>
+        <nav aria-label="footer navigation">
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#made">How it’s made?</a>
+            </li>
+            <li>
+              <a href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
 
         <form name="subsription">
           <label class="visually-hidden" for="subsriptionEmail">
