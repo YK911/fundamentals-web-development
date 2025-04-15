@@ -26,96 +26,126 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header id="home">
-      <nav aria-label="main navigation">
-        <a href="#"><i>SIMPLY</i> CHOCOLATE</a>
-        <ul>
-          <li>
-            <a class="link" href="#home" aria-labelledby="home">Home</a>
-          </li>
-          <li>
-            <a class="link" href="#made" aria-labelledby="made">
-              How it’s made?
+    <header class="header" id="home">
+      <div>
+        <nav class="header-nav" aria-label="main navigation">
+          <a class="header-logo logo" href="#"><i>SIMPLY</i> CHOCOLATE</a>
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#home" aria-labelledby="home">
+                Home
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#made" aria-labelledby="made">
+                How it’s made?
+              </a>
+            </li>
+            <li class="header-nav-item">
+              <a
+                class="header-nav-link"
+                href="#reviews"
+                aria-labelledby="reviews"
+              >
+                Chocolate is loved
+              </a>
+            </li>
+          </ul>
+          <p class="item-nav">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+            dolorum?
+          </p>
+        </nav>
+
+        <ul class="header-socials socials socials-dark">
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Facebook"
+              title="Link to Facebook"
+            >
+              <!-- <img src="./images/icons/facebook.svg" alt="Facebook icon" /> -->
+              <svg
+                class="socials-icon"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Facebook icon. Follow to navigate to https://facebook.com
+                </title>
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="9.5"
+                  stroke="#111111"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M22.64 11.4802C22.82 11.4802 23 11.4802 23.36 11.4802V14.1802C23.18 14.1802 22.82 14.1802 22.46 14.1802C22.1 14.1802 21.74 14.1802 21.56 14.3602C21.38 14.5402 21.38 14.7202 21.38 15.1402C21.38 15.5002 21.38 15.7402 21.38 16.1002H23.36V18.3802H21.38V28.2802H18.32V18.3202H16.7V16.0402H18.32V15.2602C18.32 13.9402 18.5 12.9802 18.86 12.5602C19.4 11.7802 20.48 11.4202 22.1 11.4202C22.28 11.4802 22.46 11.4802 22.64 11.4802Z"
+                  fill="#111111"
+                />
+              </svg>
             </a>
           </li>
-          <li>
-            <a class="link" href="#reviews" aria-labelledby="reviews">
-              Chocolate is loved
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Instagram"
+              title="Link to Instagram"
+            >
+              <img
+                class="socials-icon"
+                src="./images/icons/instagram.svg"
+                alt="Facebook icon"
+              />
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Twitter"
+              title="Link to Twitter"
+            >
+              <img
+                class="socials-icon"
+                src="./images/icons/twitter.svg"
+                alt="Facebook icon"
+              />
             </a>
           </li>
         </ul>
-      </nav>
-
-      <ul>
-        <li>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to Facebook"
-            title="Link to Facebook"
-          >
-            <!-- <img src="./images/icons/facebook.svg" alt="Facebook icon" /> -->
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>
-                Facebook icon. Follow to navigate to https://facebook.com
-              </title>
-              <rect
-                x="0.5"
-                y="0.5"
-                width="39"
-                height="39"
-                rx="9.5"
-                stroke="#111111"
-                stroke-opacity="0.1"
-              />
-              <path
-                d="M22.64 11.4802C22.82 11.4802 23 11.4802 23.36 11.4802V14.1802C23.18 14.1802 22.82 14.1802 22.46 14.1802C22.1 14.1802 21.74 14.1802 21.56 14.3602C21.38 14.5402 21.38 14.7202 21.38 15.1402C21.38 15.5002 21.38 15.7402 21.38 16.1002H23.36V18.3802H21.38V28.2802H18.32V18.3202H16.7V16.0402H18.32V15.2602C18.32 13.9402 18.5 12.9802 18.86 12.5602C19.4 11.7802 20.48 11.4202 22.1 11.4202C22.28 11.4802 22.46 11.4802 22.64 11.4802Z"
-                fill="#111111"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to Instagram"
-            title="Link to Instagram"
-          >
-            <img src="./images/icons/instagram.svg" alt="Facebook icon" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to Twitter"
-            title="Link to Twitter"
-          >
-            <img src="./images/icons/twitter.svg" alt="Facebook icon" />
-          </a>
-        </li>
-      </ul>
+      </div>
     </header>
     <main>
       <!-- #region Hero -->
-      <section aria-labelledby="heroSectionHeader1" role="presentation">
-        <h1 id="heroSectionHeader1" tabindex="0">
+      <section
+        aria-labelledby="heroSectionHeader1"
+        role="presentation"
+        id="hero"
+      >
+        <h1 id="heroSectionHeader1">
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
         </h1>
+        <button class="btn btn-accent" type="button">Buy now</button>
         <a href="#benefits">
           scroll down <img src="./images/icons/arrow.svg" alt="Arrow down" />
         </a>
+        <!-- <div class="circle"></div> -->
       </section>
       <!-- #endregion -->
       <!-- #region Benefits -->
@@ -124,7 +154,7 @@
         <ul>
           <li>
             <h3>Unsurpassed taste</h3>
-            <p>
+            <p class="benefits-desc">
               Crafted with the finest quality cocoa beans and a dedication to
               perfection, each bite is a decadent experience that simply cannot
               be matched. Savor the richness and complexity of our Unsurpassed
@@ -522,7 +552,7 @@
         <!-- Socials -->
         <div>
           <p>Social networks</p>
-          <ul>
+          <ul class="footer-socials socials socials-light">
             <li>
               <a
                 href="https://facebook.com"
