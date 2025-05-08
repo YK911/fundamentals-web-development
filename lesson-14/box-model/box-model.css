@@ -12,7 +12,8 @@ html {
 body {
   font-family: sans-serif;
   font-size: 24px;
-  width: 1000px;
+  /* width: 1000px; */
+  margin: 0;
 }
 .page {
   /* border: 1px solid; */
@@ -72,4 +73,39 @@ body {
 
 .section {
   background-color: tomato;
+}
+
+/* Block vs Inline */
+.block {
+  margin: 0 auto;
+  background-color: powderblue;
+}
+
+.block h2 {
+  margin-top: 0;
+  text-align: center;
+  /* background-color: tomato; */
+}
+.block p {
+  width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  /* background-color: lightgreen; */
+}
+
+.container-lg {
+  max-width: 800px;
+  padding: 0 16px;
+  margin: 0 auto;
+  outline: 2px dashed red;
+  outline-offset: -2px;
+}
+
+.block-2 {
+}
+.container-md {
+  width: 600px;
+  margin: 0 auto;
+  outline: 2px dashed red;
+  outline-offset: -2px;
 }
