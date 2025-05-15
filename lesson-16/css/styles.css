@@ -5,7 +5,11 @@
   --logo-fs: 18;
   --gradient: linear-gradient(to right, blueviolet, hotpink, darkblue);
 
+  /* Colors */
   --main-cl: 17 17 17;
+  --accent: 253 146 34;
+  --white: 255 255 255;
+  --dark: 30 24 35;
 }
 /* #endregion */
 
@@ -22,6 +26,25 @@ body {
 /* #endregion */
 
 /* #region Common */
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  max-width: 412px;
+  margin: 0 auto 50px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    color: rgb(var(--accent));
+  }
+}
+
 .container {
   max-width: 1168px;
   padding: 0 16px;
@@ -108,10 +131,23 @@ body {
   clip-path: inset(50%);
   overflow: hidden;
 }
+
+/* Grid items */
+.card-set {
+}
+.card-set-item {
+  --indent: 88px;
+  --items: 3;
+
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
 /* #endregion */
 
 /* #region Header */
 .header {
+  /* padding: 24px 0; */
+}
+.header .container {
 }
 .header-nav {
 }
@@ -122,10 +158,19 @@ body {
 .header-nav-item {
 }
 .header-nav-link {
+  display: block;
+  padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
+  /* background-color: lightgreen; */
+
+  &:hover,
+  &:focus {
+    color: rgb(var(--accent));
+  }
 }
 .header-socials {
+  display: flex;
 }
 /* #endregion */
 
@@ -170,12 +215,22 @@ body {
 
 /* #region Benefits */
 .benefits {
+  padding: 50px 0;
   background: #1e1823;
 }
 .benefits-list {
+  padding: 0 18px;
 }
 .benefits-item {
-  max-width: 308px;
+  /* max-width: 308px; */
+  /* width: calc((100% - 88px * 2) / 3); */
+}
+.benefits-icon {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .benefits-caption {
   margin-bottom: 18px;
@@ -191,34 +246,40 @@ body {
 
 /* #region Ingredients */
 .ingredients {
+  padding-top: 120px;
 }
 .ingredients-title {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  text-align: center;
-
-  span {
-    color: #fd9222;
-  }
 }
 .ingredients-list {
 }
 .ingredients-item {
-  display: flex;
-  width: 260px;
+  --items: 4;
+  --indent: 32px;
+
   padding: 28px 23px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 36px;
-  flex-shrink: 0;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+.ingredients-item:nth-child(4n + 1) {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--white));
+}
+.ingredients-item:nth-child(4n + 3) {
+  background-color: rgb(var(--dark));
+  color: rgb(var(--white));
+}
+.ingredients-item:nth-child(even) {
+  border-color: rgb(var(--accent));
 }
 .ingredients-pic {
 }
 .ingredients-name {
+  margin-top: 36px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 /* #endregion */
 
@@ -231,8 +292,11 @@ body {
   /* --width: 980px; */
 }
 .products-item {
+  --items: 4;
+  --indent: 18px;
+
   position: relative;
-  width: 270px;
+  /* width: 270px; */
   padding: 32px 20px;
   border-radius: 15px;
   border: 1px solid rgba(var(--main-cl) / 10%);
@@ -283,17 +347,50 @@ body {
   font-size: 14px;
   font-weight: 600;
 }
-
 .products-item[data-sale] .products-btn {
   --discount: calc(var(--price) * (100 - var(--sale) / 100));
   --discount: calc(attr(data-sale type(<number>)) / 100);
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
 
-  background-image: var(--gradient);
+  /* background-image: var(--gradient); */
 }
-
 .products-btn::before {
   content: var(--discount) / "%";
 }
+/* #endregion */
 
+/* #region Made */
+.made-left-side {
+  max-width: 600px;
+  min-height: 400px;
+  border-radius: 15px;
+  background-image: url("../images/made/image@2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.made-right-side {
+  max-width: 516px;
+  padding: 32px;
+  border-radius: 15px;
+  background: rgb(var(--white));
+}
+.made-subtitle {
+  max-width: 350px;
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+.made-item {
+  /* margin-bottom: 24px; */
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+/* .made-item:last-child {
+  margin-bottom: 0;
+} */
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
+}
 /* #endregion */
