@@ -52,6 +52,10 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
   font-size: calc(var(--logo-fs) * 1px);
   font-weight: 700;
   line-height: calc(20 / var(--logo-fs));
@@ -64,13 +68,20 @@ body {
 }
 
 .socials {
+  display: flex;
+  gap: 14px;
+
   &.dark {
   }
 
-  .socials-item {
+  .socials-item:not(:last-child) {
+    /* margin-right: 14px; */
   }
 
   .socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .socials-icon {
@@ -148,21 +159,46 @@ body {
   /* padding: 24px 0; */
 }
 .header .container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+
+  /* gap: 30px; */
+  /* gap: 24px 18px; */
+  /* row-gap: 24px;
+  column-gap: 18px; */
+
+  /* Default properties */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
+  /* align-content: stretch; */
+  /* flex-wrap: wrap; */
 }
 .header-nav {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* margin-right: 90px; */
 }
 .header-logo {
+  /* margin-right: 365px; */
 }
 .header-nav-list {
+  display: flex;
+  gap: 24px;
 }
-.header-nav-item {
+.header-nav-item:not(:last-child) {
+  /* margin-right: 24px; */
 }
 .header-nav-link {
   display: block;
   padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
-  /* background-color: lightgreen; */
 
   &:hover,
   &:focus {
@@ -170,7 +206,6 @@ body {
   }
 }
 .header-socials {
-  display: flex;
 }
 /* #endregion */
 
@@ -201,7 +236,18 @@ body {
   letter-spacing: -0.03em;
   color: #fff;
 }
+.hero-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 .hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-left: auto;
+
   font-weight: 500;
   letter-spacing: -0.03em;
   color: #fff;
@@ -211,6 +257,7 @@ body {
     color: #fd9222;
   }
 }
+
 /* #endregion */
 
 /* #region Benefits */
@@ -218,7 +265,10 @@ body {
   padding: 50px 0;
   background: #1e1823;
 }
+
 .benefits-list {
+  columns: 3;
+  column-gap: 88px;
   padding: 0 18px;
 }
 .benefits-item {
