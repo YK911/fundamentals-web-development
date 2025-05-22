@@ -1,0 +1,100 @@
+body {
+  font-family: Poppins, sans-serif;
+}
+img {
+  display: block;
+}
+
+.skills {
+  padding: 90px 0;
+}
+.skills-title {
+  color: #000;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+.skills-wrapper {
+  max-width: 1338px;
+  margin: 0 auto;
+}
+.skills-type {
+  flex-basis: 426px;
+  padding: 32px 18px;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+.skills-ill {
+  margin-bottom: 24px;
+}
+.skills-caption {
+  color: #263238;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.skills-desc {
+  color: #8f95a5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+.skills-btn {
+  padding: 16px 64px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  border-radius: 10px;
+  background: #263238;
+  cursor: pointer;
+}
+
+/* Use flexbox */
+/* .skills-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.skills-inner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skills-wrapper .skills-type {
+  flex-shrink: 0;
+}
+.skills-inner-wrapper > .skills-type:last-child {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row-reverse;
+} */
+
+.skills-wrapper {
+  display: grid;
+  grid-template-areas: "one two three" "one four four";
+  gap: 30px;
+}
+
+.skills-type:nth-child(1) {
+  grid-area: one;
+}
+.skills-type:nth-child(2) {
+  grid-area: two;
+}
+.skills-type:nth-child(3) {
+  grid-area: three;
+}
+.skills-type:nth-child(4) {
+  grid-area: four;
+  display: flex;
+  flex-direction: row-reverse;
+}
