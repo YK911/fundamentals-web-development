@@ -23,6 +23,7 @@
       href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.11.3/css/reset.min.css"
     />
     <!-- Custom styles -->
+    <!-- <link rel="stylesheet" href="./css/styles.css" media="(max-width: 900px)" /> -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -415,6 +416,14 @@
             <li class="products-item card-set-item" data-sale="40">
               <picture>
                 <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/products/img-1@1x.avif 1x,
+                    ./images/products/img-1@2x.avif 2x
+                  "
+                  type="image/avif"
+                />
+                <source
                   srcset="./images/products/img-1.webp"
                   type="image/webp"
                 />
@@ -713,7 +722,7 @@
       </section>
       <!-- #endregion -->
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <!-- Footer top -->
         <div>

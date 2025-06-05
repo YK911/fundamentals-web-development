@@ -2,4 +2,4 @@
 
 ## Responsive Design
 
-##
+## Media queries
