@@ -1,5 +1,7 @@
 /* #region Variables */
 :root {
+  scroll-behavior: smooth;
+
   --main-font: "Montserrat", sans-serif;
   --main-fs: 14;
   --logo-fs: 18;
@@ -15,6 +17,38 @@
   --indent-y: 88px;
   --indent-x: var(--indent-y);
   --items: 3;
+}
+/* #endregion */
+
+/* #region Animations */
+@keyframes slideRight {
+  from {
+    transform: translateX(0) rotate(10deg);
+  }
+  to {
+    transform: translateX(200px) rotate(-10deg);
+  }
+}
+
+@keyframes rotateX {
+  0% {
+    transform: perspective(400px) rotateX(8deg);
+  }
+  20% {
+    transform: perspective(400px) rotateX(24deg);
+  }
+  40% {
+    transform: perspective(400px) rotateX(-24deg);
+  }
+  60% {
+    transform: perspective(400px) rotateX(18deg);
+  }
+  80% {
+    transform: perspective(400px) rotateX(-18deg);
+  }
+  100% {
+    transform: perspective(400px) rotateX(-8deg);
+  }
 }
 /* #endregion */
 
@@ -343,7 +377,30 @@ img {
   @media only screen and (min-width: 768px) {
     font-size: 28px;
   }
+
+  /* transform: rotate(30deg); */
+
+  /* animation: slideRight 2000ms cubic-bezier(0.62, -0.18, 0.52, 1.25) 1000ms
+    infinite alternate both; */
+  /* animation-name: slideRight;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.62, -0.18, 0.52, 1.25);
+  animation-delay: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  animation-play-state: running; */
+
+  /* transform: perspective(400px) rotateX(24deg); */
+  transform-origin: top center;
+
+  animation: rotateX 2s ease 1.5s;
 }
+
+.hero-title:hover {
+  animation-play-state: paused;
+}
+
 .hero-controls {
   position: relative;
   display: flex;
