@@ -1,0 +1,64 @@
+.header {
+}
+
+.nav {
+}
+.nav__menu {
+  margin-left: auto;
+}
+
+.menu {
+}
+.menu__item {
+}
+.menu__link {
+}
+
+.footer {
+}
+.footer__menu {
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 16px;
+
+  border: none;
+  background-color: rgb(149, 157, 165);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.btn--radius-sm {
+  border-radius: 4px;
+}
+.btn--radius-md {
+  border-radius: 8px;
+}
+.btn--radius-lg {
+  border-radius: 16px;
+}
+
+.btn:hover,
+.btn:focus {
+}
+
+.btn::after {
+}
+
+.btn__icon {
+}
+.btn__icon--start {
+  margin-right: 12px;
+}
+.btn__icon--end {
+  margin-left: 12px;
+}
+
+.btn__text {
+}
+.btn__text--light {
+  color: white;
+}

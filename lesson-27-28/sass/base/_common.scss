@@ -1,0 +1,11 @@
+// @use "./vars" as v;
+@use "../abstracts/vars" as *;
+
+// .page {
+//   font-size: v.$base-size;
+//   color: v.$primary-color;
+// }
+.page {
+  font-size: $large-size;
+  color: $main-color;
+}

@@ -1,0 +1,92 @@
+$main-color: black;
+$primary-color: black;
+$accent-color: black;
+
+
+.nav {
+  background-color: lighten($main-color, 5);
+
+  &__item {
+    color: $primary-color;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.card {
+  font-family: sans-serif;
+
+  width: 25vw;
+  padding: 16px;
+  background-color: #979797;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+.card__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 8px;
+}
+.card__title {
+  text-transform: uppercase;
+}
+.card__desc {
+  color: #fff;
+
+}
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 150ms;
+
+  .card:hover & {
+    background-color: transparent;
+    border-color: rebeccapurple;
+    color: rebeccapurple;
+  }
+}
+
+.box {
+  width: 960px + 10px;
+  width: 6% + 10%;
+  width: 960px + 30;
+  // width: 960px + 30%; //! Error
+
+  width: 960px - 10px;
+  width: 6% - 10%;
+  width: 960px - 30;
+  // width: 960px - 30%; //! Error
+}
+
+.box {
+  $value: 90px;
+  // width: 60px * 10px; //! Error
+  // width: 60% * 10%; //! Error
+
+  width: 100px * 2;
+  width: 100px * 2 + 10px;
+  width: (100px + 10px) * 2;
+
+  width: $value / 3;
+  width: (90px / 3);
+  width: 90px / 3 + 50px;
+}
+
+.box {
+  $value: 90px;
+
+  width: $value * 2;
+  width: calc($value * 2);
+  width: calc(#{$value} * 2);
+}

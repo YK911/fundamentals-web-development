@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as m;
+
+.btn {
+  @include m.btn(18px, 10px, 20px, lightblue);
+}
+
+.btn-1 {
+  @include m.btn(18px, 10px, 20px, lightblue);
+}

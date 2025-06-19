@@ -1,0 +1,7 @@
+@mixin btn ($fs, $py,$px, $cl) {
+  display: inline-flex;
+  font-size: $fs;
+  padding: $py $px;
+  color:  $cl;
+  background-color: gray;
+}
