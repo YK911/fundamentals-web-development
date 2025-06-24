@@ -1,0 +1,36 @@
+.button-error, .button-success {
+  display: inline-flex;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  background-color: gray;
+}
+
+.button-success {
+  background-color: lightgreen;
+}
+
+.button-error {
+  background-color: red;
+}
+
+.page {
+  font-size: 24px;
+  color: #000;
+}
+
+.btn {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 10px 20px;
+  color: lightblue;
+  background-color: gray;
+}
+
+.btn-1 {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 10px 20px;
+  color: lightblue;
+  background-color: gray;
+}/*# sourceMappingURL=styles.css.map */

@@ -4,4 +4,3 @@
 - Flow control: @if, @each, @for
 - Functions - @function
 - List and Map
-- Each

@@ -1,0 +1,111 @@
+%size {
+  width: 100px;
+  height: 100px;
+}
+
+// @mixin size {
+//   width: 100px;
+//   height: 100px;
+// }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+.box-s {
+  @include size(50px, 50px);
+}
+
+.box-m {
+  @extend %size;
+}
+
+.box-l {
+  @include size(150px, 150px);
+}
+
+.box-xl {
+  @include size(150px);
+}
+
+@mixin position(
+  $layer-index,
+  $position: absolute,
+  $position-x: 50%,
+  $position-y: $position-x,
+  $offset-x: $position-x,
+  $offset-y: $offset-x
+) {
+  position: $position;
+  top: $position-x;
+  left: $position-y;
+
+  @if ($offset-x != null) {
+    transform: translate(($offset-x * -1), ($offset-y * -1));
+  }
+
+  z-index: $layer-index;
+}
+
+.absolute {
+  @include position($position: relative, $position-x: null, $layer-index: 1);
+}
+
+$args: "btn-sm", "btn-md", "btn-lg";
+
+@mixin btn-size($args...) {
+  @for $i from 1 through length($args) {
+    .#{nth($args, $i)} {
+      $factor: ($i * 4 - 4);
+
+      padding: (4px + $factor) (8px + $factor);
+      border-radius: (8px + $factor);
+    }
+  }
+}
+
+@include btn-size("btn-sm", "btn-md", "btn-lg");
+
+@mixin hover {
+  &:not(:disabled):hover {
+    @content;
+  }
+}
+
+.button {
+  background-color: white;
+  border: 1px solid darkblue;
+
+  @include hover {
+    color: white;
+    background-color: darkblue;
+  }
+}
+
+@mixin media($type) {
+  @if ($type == "modile") {
+    @media screen and (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @if ($type == "tablet") {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($type == "desktop") {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+.logo {
+  @include media(desktop) {
+    width: 20px;
+    height: 20px;
+  }
+}
